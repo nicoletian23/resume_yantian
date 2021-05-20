@@ -7,24 +7,24 @@
         :data="tableData"
         border
         stripe
-        style="width: 80%;margin:60px auto;"
+        style="width: 90%;margin:60px auto;"
       >
         <el-table-column type="expand" align="center">
           <template slot-scope="props">
-            <el-form label-position="left" inline class="table-expand">
-              <el-form-item label="项目名称">
+            <el-form label-position="top" inline class="table-expand">
+              <el-form-item label="项目名称：">
                 <span>{{ props.row.proname }}</span>
               </el-form-item>
-              <el-form-item label="项目类别">
+              <el-form-item label="项目类别：">
                 <span>{{ props.row.category }}</span>
               </el-form-item>
-              <el-form-item label="可访问地址">
+              <el-form-item label="可访问地址：">
                 <span>{{ props.row.address }}</span>
               </el-form-item>
-              <el-form-item label="项目描述">
+              <el-form-item label="项目描述：">
                 <span>{{ props.row.desc }}</span>
               </el-form-item>
-              <el-form-item label="项目职责">
+              <el-form-item label="项目职责：">
                 <span>{{ props.row.con }}</span>
               </el-form-item>
               <el-form-item label="技术描述">
@@ -138,7 +138,9 @@ export default {
 
 <style lang="less" scoped>
 .project {
+    width: 100%;
   .pro-job {
+     margin: 40px auto 70px;
     .table-expand {
       font-size: 0;
       label {

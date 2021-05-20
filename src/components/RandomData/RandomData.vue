@@ -2,21 +2,20 @@
   <div class="random-data">
     <!-- 随机获取饼图数据 -->
     <el-divider content-position="center">随机获取饼图数据</el-divider>
-    <div id="main1" style="width: 1100px;height:600px;"></div>
+    <div id="main1" style="width: 1100px;height:400px;"></div>
 
     <!-- 随机表格排序 -->
     <el-divider content-position="center">随机表格排序</el-divider>
     <el-table
       :data="tableData"
       border
-      style="width: 100%"
+     style="width: 90%;margin:60px auto;"
       :default-sort="{ prop: 'start', order: 'descending' }"
     >
       <el-table-column
         prop="start"
         label="开始日期"
         sortable
-        width="120"
         align="center"
       >
       </el-table-column>
@@ -24,18 +23,16 @@
         prop="end"
         label="结束日期"
         sortable
-        width="140"
         align="center"
       >
       </el-table-column>
       <el-table-column
         prop="company"
         label="公司名称"
-        width="250"
         align="center"
       >
       </el-table-column>
-      <el-table-column prop="post" label="岗位" width="200" align="center">
+      <el-table-column prop="post" label="岗位" align="center">
       </el-table-column>
     </el-table>
   </div>
@@ -204,8 +201,12 @@ export default {
 
 <style lang="less" scoped>
 .random-data {
+    width: 100%;
   #main1 {
     margin: 30px auto;
+  }
+  .el-table{
+      margin: 0 auto 0;
   }
 }
 </style>
